@@ -1,5 +1,5 @@
-import "./App.css";
-import { Formik, Form, Field } from "formik";
+import "./Index.css";
+import { Formik, Form } from "formik";
 
 // Components
 import Step1 from './components/steps/Step1'

@@ -1,36 +1,11 @@
-import React from "react";
-import { Field } from "formik";
 import { useState } from 'react'
 import { Switch } from '@headlessui/react'
 
-
-
-function Step2({ values }) {
-
-
+export default function Toggle() {
   const [enabled, setEnabled] = useState(false)
-   
+
   return (
-    <>
-      <div role="group" aria-labelledby="my-radio-group">
-        <label>
-          <Field type="radio" name="picked" value="Arcade" />
-          Arcade
-        </label>
-        <label>
-          <Field type="radio" name="picked" value="Advanced" />
-          Advanced
-        </label>
-
-        <label>
-          <Field type="radio" name="picked" value="Pro" />
-          Pro
-        </label>
-        <div>Picked: {values.picked}</div>
-    
-      </div>
-
-      <div className="py-16">
+    <div className="py-16">
       <Switch
         checked={enabled}
         onChange={setEnabled}
@@ -45,8 +20,5 @@ function Step2({ values }) {
         />
       </Switch>
     </div>
-    </>
-  );
+  )
 }
-
-export default Step2;
