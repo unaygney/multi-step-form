@@ -5,8 +5,8 @@ function Step1() {
   return (
     <div>
       <>
-        <Field name="name" placeholder={"name"} />
-        <Field name="surname" placeholder={"surname"} />
+        <Field name="name" placeholder={"Name"} />
+        <Field name="surname" placeholder={"Surname"} />
       </>
     </div>
   );
