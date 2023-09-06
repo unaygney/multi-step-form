@@ -10,7 +10,7 @@ import Step3 from './components/steps/Step3'
 function App() {
   return (
     <div>
-      <h1>Anywhere in your App</h1>
+      <h1 className="form-title">Anywhere in your App</h1>
 
       <Formik
         initialValues={{
@@ -47,19 +47,19 @@ function App() {
 
               <div className="buttons">
                 {values.step !== 1 && (
-                  <button type="button" onClick={handleChangePrev}>
+                  <button className="btn" type="button" onClick={handleChangePrev}>
                     Go Back
                   </button>
                 )}
 
                 {values.step < values.lastStep && (
-                  <button type="button" onClick={handleChangeNext}>
+                  <button className="btn active" type="button" onClick={handleChangeNext}>
                     Next Step
                   </button>
                 )}
 
                 {values.step === values.lastStep && (
-                  <button type="submit">Confirm</button>
+                  <button className="btn confirm" type="submit">Confirm</button>
                 )}
               </div>
             </Form>
