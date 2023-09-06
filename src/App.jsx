@@ -1,5 +1,5 @@
-import "./Index.css";
 import { Formik, Form } from "formik";
+import './main.css'
 
 // Components
 import Step1 from './components/steps/Step1'

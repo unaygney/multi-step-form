@@ -5,9 +5,10 @@ function Step1() {
   return (
     <div>
         <Field name="name" placeholder={"Name"} />
-        <Field name="surname" placeholder={"Surname"} />
+        <Field name="email" placeholder={"e.g. stephenking@lorem.com"} />
     </div>
   );
 }
 
 export default Step1;
+  
