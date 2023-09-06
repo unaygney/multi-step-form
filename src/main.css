@@ -3,6 +3,9 @@
    License: none (public domain)
 */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -57,13 +60,15 @@ body {
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal; }
+  line-height: normal;
+  color: #022959; }
 
 .form-subtitle {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 25px; }
+  line-height: 25px;
+  color: #9699AA; }
 
 @media (max-width: 478px) {
   .form-title {
@@ -101,3 +106,62 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+  body .multi-step-form {
+    display: flex;
+    gap: 12px;
+    background-color: #FFF;
+    border-radius: 16px;
+    box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    min-height: 60vh;
+    min-width: 90vh; }
+    body .multi-step-form .side-bar {
+      width: 274px;
+      height: 568px;
+      border-radius: 10px;
+      background: url("./assets/bg-sidebar-desktop.svg") no-repeat center/cover;
+      display: flex;
+      flex-direction: column;
+      padding-top: 40px;
+      padding-left: 32px;
+      gap: 32px;
+      color: #FFF; }
+      body .multi-step-form .side-bar .item {
+        display: flex;
+        align-items: center;
+        gap: 16px; }
+        body .multi-step-form .side-bar .item .item-number {
+          border: 1px solid #FFF;
+          width: 33px;
+          height: 33px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 9999px; }
+          body .multi-step-form .side-bar .item .item-number.active {
+            background-color: #BEE2FD;
+            color: #022959;
+            border: none; }
+        body .multi-step-form .side-bar .item .item-body {
+          display: flex;
+          flex-direction: column;
+          gap: 4px; }
+          body .multi-step-form .side-bar .item .item-body .subtitle {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: normal;
+            font-style: normal;
+            color: #ABBCFF;
+            text-transform: uppercase; }
+          body .multi-step-form .side-bar .item .item-body .title {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-transform: uppercase; }
+    body .multi-step-form .form-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 50px; }
