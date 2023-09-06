@@ -9,7 +9,7 @@ function Step1() {
 
 
   return (
-    <>
+    <div className="step1-form">
       <h2 className="form-title">Personal Info</h2>
       <h5 className="form-subtitle">
         Please provide your name, email address, and phone number.
@@ -23,7 +23,7 @@ function Step1() {
         ))}
 
       </div>
-    </>
+    </div>
   );
 }
 

@@ -40,7 +40,7 @@ body {
           justify-content: center;
           border-radius: 9999px;
 
-          &.active{
+          &.active {
             background-color: $color-sky-blue;
             color: $color-denim;
             border: none;
@@ -61,7 +61,7 @@ body {
             text-transform: uppercase;
           }
 
-          .title{
+          .title {
             font-size: 14px;
             font-style: normal;
             font-weight: 700;
@@ -79,6 +79,32 @@ body {
       flex-direction: column;
       padding: 20px 50px;
 
+      form {
+        .step1-form {
+          display: flex;
+          height: 100%;
+          flex-direction: column;
+          gap: 12px;
+
+          .form-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            .form-control {
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+
+              input {
+                height: 48px;
+                border-radius: 8px;
+                border: 1px solid $border-color;
+                padding: 0 16px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

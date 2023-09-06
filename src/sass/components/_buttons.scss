@@ -1,35 +1,39 @@
-.btn {
-  color: $color-gray;
-  font-weight: 500;
-  line-height: normal;
-  font-style: normal;
-  font-size: 16px;
-  cursor: pointer;
-  width: 123px;
-  height: 48px;
-  border-radius: 8px;
-  &.active {
-    background-color: $color-denim;
-    color: $color-white;
+.buttons {
 
-    &:hover{
-      background-color: #164A8A;
+  .btn {
+    color: $color-gray;
+    font-weight: 500;
+    line-height: normal;
+    font-style: normal;
+    font-size: 16px;
+    cursor: pointer;
+    width: 123px;
+    height: 48px;
+    border-radius: 8px;
+    &.active {
+      background-color: $color-denim;
+      color: $color-white;
+
+      &:hover {
+        background-color: #164a8a;
+      }
     }
-  }
-  &.confirm {
-    color: $color-white;
-    background-color: $color-purple;
+    &.confirm {
+      color: $color-white;
+      background-color: $color-purple;
 
-    &:hover{
-      background-color:#928CFF;;
+      &:hover {
+        background-color: #928cff;
+      }
     }
   }
 }
 
-@media (max-width : 478px){
-  .btn{
-    width: 97px;
-    height: 40px;
-    
+@media (max-width: 478px) {
+  .buttons {
+    .btn {
+      width: 97px;
+      height: 40px;
+    }
   }
 }

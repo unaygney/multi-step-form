@@ -74,7 +74,7 @@ body {
   .form-title {
     font-size: 24px; } }
 
-.btn {
+.buttons .btn {
   color: #9699AA;
   font-weight: 500;
   line-height: normal;
@@ -84,19 +84,19 @@ body {
   width: 123px;
   height: 48px;
   border-radius: 8px; }
-  .btn.active {
+  .buttons .btn.active {
     background-color: #022959;
     color: #FFF; }
-    .btn.active:hover {
-      background-color: #164A8A; }
-  .btn.confirm {
+    .buttons .btn.active:hover {
+      background-color: #164a8a; }
+  .buttons .btn.confirm {
     color: #FFF;
     background-color: #483EFF; }
-    .btn.confirm:hover {
-      background-color: #928CFF; }
+    .buttons .btn.confirm:hover {
+      background-color: #928cff; }
 
 @media (max-width: 478px) {
-  .btn {
+  .buttons .btn {
     width: 97px;
     height: 40px; } }
 
@@ -165,3 +165,21 @@ body {
       display: flex;
       flex-direction: column;
       padding: 20px 50px; }
+      body .multi-step-form .form-container form .step1-form {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        gap: 12px; }
+        body .multi-step-form .form-container form .step1-form .form-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 24px; }
+          body .multi-step-form .form-container form .step1-form .form-wrapper .form-control {
+            display: flex;
+            flex-direction: column;
+            gap: 8px; }
+            body .multi-step-form .form-container form .step1-form .form-wrapper .form-control input {
+              height: 48px;
+              border-radius: 8px;
+              border: 1px solid #D6D9E6;
+              padding: 0 16px; }
