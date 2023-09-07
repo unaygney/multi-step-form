@@ -100,6 +100,51 @@ body {
     width: 97px;
     height: 40px; } }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 20px; }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #022959;
+  -webkit-transition: 0.4s;
+  transition: 0.4s; }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s; }
+  .slider.round {
+    border-radius: 34px; }
+    .slider.round:before {
+      border-radius: 50%; }
+
+input:checked + .slider {
+  background-color: #022959; }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px); }
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3; }
+
 body {
   background-color: #EFF5FF;
   height: 100vh;
@@ -114,7 +159,7 @@ body {
     box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.1);
     padding: 16px;
     min-height: 60vh;
-    min-width: 90vh; }
+    width: 90vh; }
     body .multi-step-form .side-bar {
       width: 274px;
       height: 568px;
@@ -165,21 +210,82 @@ body {
       display: flex;
       flex-direction: column;
       padding: 20px 50px; }
-      body .multi-step-form .form-container form .step1-form {
-        display: flex;
-        height: 100%;
-        flex-direction: column;
-        gap: 12px; }
-        body .multi-step-form .form-container form .step1-form .form-wrapper {
+      body .multi-step-form .form-container .buttons {
+        display: flex; }
+        body .multi-step-form .form-container .buttons .btn.active {
+          margin-left: auto; }
+        body .multi-step-form .form-container .buttons .btn.confirm {
+          margin-left: auto; }
+      body .multi-step-form .form-container form {
+        height: 90%; }
+        body .multi-step-form .form-container form .step1-form {
           display: flex;
+          height: 100%;
           flex-direction: column;
-          gap: 24px; }
-          body .multi-step-form .form-container form .step1-form .form-wrapper .form-control {
+          gap: 12px; }
+          body .multi-step-form .form-container form .step1-form .form-wrapper {
             display: flex;
             flex-direction: column;
-            gap: 8px; }
-            body .multi-step-form .form-container form .step1-form .form-wrapper .form-control input {
-              height: 48px;
-              border-radius: 8px;
+            gap: 24px; }
+            body .multi-step-form .form-container form .step1-form .form-wrapper .form-control {
+              display: flex;
+              flex-direction: column;
+              gap: 8px; }
+              body .multi-step-form .form-container form .step1-form .form-wrapper .form-control input {
+                height: 48px;
+                border-radius: 8px;
+                border: 1px solid #D6D9E6;
+                padding: 0 16px; }
+        body .multi-step-form .form-container form .step2-form {
+          display: flex;
+          height: 100%;
+          flex-direction: column;
+          gap: 12px; }
+          body .multi-step-form .form-container form .step2-form .radio-group {
+            margin-top: 35px;
+            display: flex;
+            gap: 18px; }
+            body .multi-step-form .form-container form .step2-form .radio-group label {
               border: 1px solid #D6D9E6;
-              padding: 0 16px; }
+              flex: 1;
+              height: 160px;
+              border-radius: 8px;
+              display: flex;
+              flex-direction: column;
+              padding: 16px; }
+              body .multi-step-form .form-container form .step2-form .radio-group label .info {
+                margin-top: auto; }
+                body .multi-step-form .form-container form .step2-form .radio-group label .info .select-title {
+                  color: #022959;
+                  font-size: 16px;
+                  font-weight: 500;
+                  margin-bottom: 7px; }
+                body .multi-step-form .form-container form .step2-form .radio-group label .info .select-price {
+                  color: #9699AA;
+                  font-size: 14px;
+                  font-weight: 400; }
+              body .multi-step-form .form-container form .step2-form .radio-group label.selected {
+                border: 1px solid #483EFF;
+                background-color: #F8F9FF; }
+              body .multi-step-form .form-container form .step2-form .radio-group label input {
+                display: none; }
+          body .multi-step-form .form-container form .step2-form .switch-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+            background-color: #F8F9FF;
+            gap: 24px;
+            margin-top: 32px; }
+            body .multi-step-form .form-container form .step2-form .switch-box .switch-price {
+              color: #9699AA;
+              font-weight: 500;
+              font-size: 14px; }
+              body .multi-step-form .form-container form .step2-form .switch-box .switch-price.active {
+                color: #022959; }
+        body .multi-step-form .form-container form .step3-form {
+          height: 100%; }
+        body .multi-step-form .form-container form .step4-form {
+          height: 100%; }
+        body .multi-step-form .form-container form .buttons {
+          margin-top: auto; }

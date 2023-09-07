@@ -13,7 +13,7 @@ body {
     box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.1);
     padding: 16px;
     min-height: 60vh;
-    min-width: 90vh;
+    width: 90vh;
 
     .side-bar {
       width: 274px;
@@ -79,7 +79,23 @@ body {
       flex-direction: column;
       padding: 20px 50px;
 
+      .buttons {
+        display: flex;
+
+        .btn {
+          &.active {
+            margin-left: auto;
+          }
+
+          &.confirm {
+            margin-left: auto;
+          }
+        }
+      }
+
       form {
+
+        height: 90%;
         .step1-form {
           display: flex;
           height: 100%;
@@ -103,6 +119,85 @@ body {
               }
             }
           }
+        }
+
+        .step2-form {
+          display: flex;
+          height: 100%;
+          flex-direction: column;
+          gap: 12px;
+          .radio-group {
+            margin-top: 35px;
+            display: flex;
+            gap: 18px;
+            label {
+              border: 1px solid $border-color;
+              flex: 1;
+              height: 160px;
+              border-radius: 8px;
+              display: flex;
+              flex-direction: column;
+              padding: 16px;
+
+              .info {
+                margin-top: auto;
+
+                .select-title {
+                  color: $color-denim;
+                  font-size: 16px;
+                  font-weight: 500;
+                  margin-bottom: 7px;
+                }
+
+                .select-price {
+                  color: $color-gray;
+                  font-size: 14px;
+                  font-weight: 400;
+                }
+              }
+
+              &.selected {
+                border: 1px solid $color-purple;
+                background-color: $very-light-gray;
+              }
+              input {
+                display: none;
+              }
+            }
+          }
+
+          .switch-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+            background-color: $very-light-gray;
+            gap: 24px;
+            margin-top: 32px;
+
+            .switch-price{
+              color: $color-gray;
+              font-weight: 500;
+              font-size: 14px;
+
+              &.active{
+                color: $color-denim;
+              }
+
+            }
+          }
+        }
+
+        .step3-form{
+          height: 100%;
+        } 
+
+        .step4-form{
+          height: 100%;
+        } 
+
+        .buttons {
+          margin-top: auto;
         }
       }
     }

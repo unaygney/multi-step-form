@@ -2,7 +2,7 @@ import React from "react";
 
 function Step4() {
   return (
-    <div>
+    <div className="step4-form">
       <h2 className="form-title">Pick add-ons</h2>
       <h5 className="form-subtitle">
         Add-ons help enhance your gaming experience.

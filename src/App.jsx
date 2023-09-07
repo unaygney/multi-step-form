@@ -1,4 +1,4 @@
-import MultiStepForm from "./components/Form/MultiStepForm";
+import MultiStepForm from "./components/steps/MultiStepForm";
 import SideBar from "./components/SideBar";
 import "./main.css";
 
