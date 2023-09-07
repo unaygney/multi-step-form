@@ -285,6 +285,41 @@ body {
                 color: #022959; }
         body .multi-step-form .form-container form .step3-form {
           height: 100%; }
+          body .multi-step-form .form-container form .step3-form .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px; }
+            body .multi-step-form .form-container form .step3-form .checkbox-group .checkbox-label {
+              width: 100%;
+              height: 81px;
+              border: 1px solid #D6D9E6;
+              border-radius: 8px;
+              display: flex;
+              align-items: center;
+              gap: 24px;
+              padding: 24px 12px; }
+              body .multi-step-form .form-container form .step3-form .checkbox-group .checkbox-label.active {
+                border: 1px solid #483EFF;
+                background-color: #F8F9FF; }
+              body .multi-step-form .form-container form .step3-form .checkbox-group .checkbox-label .checkbox-text {
+                display: flex;
+                flex-direction: column;
+                gap: 7px; }
+                body .multi-step-form .form-container form .step3-form .checkbox-group .checkbox-label .checkbox-text .checkbox-title {
+                  font-size: 16px;
+                  font-weight: 500;
+                  color: #022959; }
+                body .multi-step-form .form-container form .step3-form .checkbox-group .checkbox-label .checkbox-text .checkbox-info {
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 20px;
+                  color: #9699AA; }
+              body .multi-step-form .form-container form .step3-form .checkbox-group .checkbox-label .price {
+                margin-left: auto;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                color: #483EFF; }
         body .multi-step-form .form-container form .step4-form {
           height: 100%; }
         body .multi-step-form .form-container form .buttons {

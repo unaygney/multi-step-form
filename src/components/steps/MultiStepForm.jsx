@@ -18,8 +18,8 @@ function MultiStepForm() {
         initialValues={{
           step: 1,
           lastStep: 5,
-          //Step 1
 
+          //Step 1
           name: "",
           email: "",
           phone: "",
@@ -27,9 +27,12 @@ function MultiStepForm() {
           // Step 2
           picked: "",
 
-
-          //Step 3
-          about: "",
+          //step 3 
+          "service-0" : false,
+          "service-1" : false,
+          "service-2" : false
+    
+        
         }}
         onSubmit={(values, actions) => {
           console.log("values", values);
