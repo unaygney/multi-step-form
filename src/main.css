@@ -152,13 +152,12 @@ body {
   align-items: center;
   justify-content: center; }
   body .multi-step-form {
-    display: flex;
     background-color: #FFF;
     border-radius: 16px;
     box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.1);
     padding: 16px;
-    min-height: 60vh;
-    width: 90vh; }
+    width: 940px;
+    height: 600px; }
     body .multi-step-form .side-bar {
       width: 274px;
       height: 568px;
@@ -213,12 +212,14 @@ body {
         body .multi-step-form .form-container .buttons .btn.confirm {
           margin-left: auto; }
       body .multi-step-form .form-container form {
-        padding: 20px 50px; }
+        flex: 1;
+        padding: 0 50px; }
         body .multi-step-form .form-container form .step1-form {
           display: flex;
           height: 90%;
           flex-direction: column;
-          gap: 12px; }
+          gap: 12px;
+          padding: 20px 0; }
           body .multi-step-form .form-container form .step1-form .form-wrapper {
             display: flex;
             flex-direction: column;
@@ -245,7 +246,8 @@ body {
           display: flex;
           height: 90%;
           flex-direction: column;
-          gap: 12px; }
+          gap: 12px;
+          padding: 20px 0; }
           body .multi-step-form .form-container form .step2-form .radio-group {
             margin-top: 35px;
             display: flex;
@@ -292,7 +294,8 @@ body {
           height: 90%;
           display: flex;
           flex-direction: column;
-          gap: 12px; }
+          gap: 12px;
+          padding: 20px 0; }
           body .multi-step-form .form-container form .step3-form .checkbox-group {
             display: flex;
             flex-direction: column;
@@ -333,7 +336,8 @@ body {
           height: 90%;
           display: flex;
           flex-direction: column;
-          gap: 12px; }
+          gap: 12px;
+          padding: 20px 0; }
           body .multi-step-form .form-container form .step4-form .control-panel {
             background-color: #F8F9FF;
             padding: 24px;
@@ -391,5 +395,24 @@ body {
               font-size: 20px;
               font-weight: 700;
               line-height: 20px; }
+        body .multi-step-form .form-container form .success-page {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 90%; }
+          body .multi-step-form .form-container form .success-page .success-title {
+            margin-top: 32px;
+            color: #022959;
+            font-size: 32px;
+            font-weight: 700; }
+          body .multi-step-form .form-container form .success-page .success-text {
+            text-align: center;
+            color: #9699AA;
+            font-size: 16px;
+            line-height: 25px;
+            font-weight: 400;
+            width: 50ch;
+            margin-top: 14px; }
         body .multi-step-form .form-container form .buttons {
           margin-top: auto; }

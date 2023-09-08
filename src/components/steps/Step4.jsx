@@ -1,7 +1,7 @@
 import React from "react";
 import { StepInfo } from "../constants";
 
-function Step4({ values, billingTypes }) {
+function Step4({ values, billingTypes  ,setBillingTypes}) {
   const pickedTitle = values.picked;
   const allServices = StepInfo[0].step3[billingTypes];
   const filteredServices = [];
@@ -10,19 +10,18 @@ function Step4({ values, billingTypes }) {
   );
   const price = matchedItem ? matchedItem.price : "";
 
-
- 
-
   allServices.forEach((service, index) => {
     const serviceStatusKey = `service-${index}`;
     if (values[serviceStatusKey]) {
       filteredServices.push(service);
     }
   });
-const totalAmount = filteredServices.reduce((total, service) => total + service.priceAmount, 0);
+  const totalAmount = filteredServices.reduce(
+    (total, service) => total + service.priceAmount,
+    0
+  );
 
-
-const allTotalAmount = (matchedItem.priceAmount + totalAmount)
+  const allTotalAmount = matchedItem.priceAmount + totalAmount;
 
   return (
     <div className="step4-form">
@@ -36,7 +35,17 @@ const allTotalAmount = (matchedItem.priceAmount + totalAmount)
             <h4 className="picked">
               {values.picked}({billingTypes})
             </h4>
-            <button className="change">Change</button>
+            <button
+              type="button"
+              onClick={() =>
+                setBillingTypes(
+                  billingTypes === "monthly" ? "yearly" : "monthly"
+                )
+              }
+              className="change"
+            >
+              Change
+            </button>
           </div>
           <div className="control-price-picked">{price}</div>
         </div>
@@ -53,7 +62,9 @@ const allTotalAmount = (matchedItem.priceAmount + totalAmount)
 
       <div className="total-amount">
         <h4 className="total">Total ({billingTypes})</h4>
-        <h4 className="total-price">{`+${allTotalAmount}/${billingTypes === 'monthly' ? 'mo' : 'yr'}`}</h4>
+        <h4 className="total-price">{`+${allTotalAmount}/${
+          billingTypes === "monthly" ? "mo" : "yr"
+        }`}</h4>
       </div>
     </div>
   );
