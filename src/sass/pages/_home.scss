@@ -7,7 +7,6 @@ body {
 
   .multi-step-form {
     display: flex;
-    gap: 12px;
     background-color: $color-white;
     border-radius: 16px;
     box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.1);
@@ -74,10 +73,7 @@ body {
     }
 
     .form-container {
-      flex: 1;
       display: flex;
-      flex-direction: column;
-      padding: 20px 50px;
 
       .buttons {
         display: flex;
@@ -94,10 +90,10 @@ body {
       }
 
       form {
-        height: 90%;
+        padding: 20px 50px;
         .step1-form {
           display: flex;
-          height: 100%;
+          height: 90%;
           flex-direction: column;
           gap: 12px;
 
@@ -109,6 +105,7 @@ body {
               display: flex;
               flex-direction: column;
               gap: 8px;
+              position: relative;
 
               input {
                 height: 48px;
@@ -116,13 +113,23 @@ body {
                 border: 1px solid $border-color;
                 padding: 0 16px;
               }
+
+              .error-message {
+                color: $color-red-errors;
+                position: absolute;
+                right: 0;
+                font-size: 14px;
+                font-weight: 700;
+                font-style: normal;
+                line-height: normal;
+              }
             }
           }
         }
 
         .step2-form {
           display: flex;
-          height: 100%;
+          height: 90%;
           flex-direction: column;
           gap: 12px;
           .radio-group {
@@ -187,7 +194,7 @@ body {
         }
 
         .step3-form {
-          height: 100%;
+          height: 90%;
           display: flex;
           flex-direction: column;
           gap: 12px;
@@ -241,7 +248,7 @@ body {
         }
 
         .step4-form {
-          height: 100%;
+          height: 90%;
           display: flex;
           flex-direction: column;
           gap: 12px;
@@ -254,26 +261,23 @@ body {
             gap: 16px;
             margin-bottom: 25px;
 
-         
-
             .control-item {
               display: flex;
               justify-content: space-between;
-              
-              .control-price{
+
+              .control-price {
                 color: $color-denim;
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 20px;
               }
 
-              .control-price-picked{
+              .control-price-picked {
                 color: $color-denim;
                 font-size: 16px;
                 font-weight: 700;
                 line-height: 20px;
               }
-              
 
               .control-item-name {
                 display: flex;
@@ -281,23 +285,22 @@ body {
                 align-items: flex-start;
                 gap: 7px;
 
-                h4{
+                h4 {
                   color: $color-gray;
                   font-weight: 400;
                   line-height: 20px;
-
                 }
 
-                .change{
+                .change {
                   color: $color-gray;
                   font-size: 14px;
                   font-weight: 400;
                   line-height: 20px;
-                  text-decoration-line:underline ;
+                  text-decoration-line: underline;
                   cursor: pointer;
                 }
 
-                .picked{
+                .picked {
                   color: $color-denim;
                   font-size: 16px;
                   font-weight: 500;
@@ -306,25 +309,24 @@ body {
 
               &:first-child {
                 padding-bottom: 24px;
-                border-bottom: 1px solid rgba(150, 153, 170, .3);
-;
+                border-bottom: 1px solid rgba(150, 153, 170, 0.3);
               }
             }
           }
 
-          .total-amount{
+          .total-amount {
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            .total{
+            .total {
               font-size: 14px;
               font-weight: 400;
               line-height: 20px;
               color: $color-gray;
             }
 
-            .total-price{
+            .total-price {
               color: $color-purple;
               font-size: 20px;
               font-weight: 700;

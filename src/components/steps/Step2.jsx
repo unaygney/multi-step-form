@@ -13,11 +13,9 @@ const Icons = {
   3: ProIcon,
 };
 
-function Step2({ values ,setBillingTypes , billingTypes }) {
+function Step2({ values, setBillingTypes, billingTypes }) {
   const [isActive, setIsActive] = useState(false);
   const selectedValue = values.picked;
-
-
 
   return (
     <div className="step2-form">
@@ -48,9 +46,10 @@ function Step2({ values ,setBillingTypes , billingTypes }) {
       </div>
 
       <div className="switch-box">
-      <span className={`switch-price ${isActive ? "" : "active"}`}>Monthly</span>
+        <span className={`switch-price ${isActive ? "" : "active"}`}>
+          Monthly
+        </span>
         <label className="switch">
-      
           <input
             type="checkbox"
             checked={isActive}
@@ -59,7 +58,9 @@ function Step2({ values ,setBillingTypes , billingTypes }) {
           />
           <span className="slider round"></span>
         </label>
-          <span className={`switch-price ${isActive ? "active" : ""}`}>Yearly</span>
+        <span className={`switch-price ${isActive ? "active" : ""}`}>
+          Yearly
+        </span>
       </div>
     </div>
   );
