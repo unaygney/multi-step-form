@@ -284,11 +284,15 @@ body {
               body .multi-step-form .form-container form .step2-form .switch-box .switch-price.active {
                 color: #022959; }
         body .multi-step-form .form-container form .step3-form {
-          height: 100%; }
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 12px; }
           body .multi-step-form .form-container form .step3-form .checkbox-group {
             display: flex;
             flex-direction: column;
-            gap: 16px; }
+            gap: 16px;
+            margin-top: 28px; }
             body .multi-step-form .form-container form .step3-form .checkbox-group .checkbox-label {
               width: 100%;
               height: 81px;
@@ -321,6 +325,66 @@ body {
                 line-height: 20px;
                 color: #483EFF; }
         body .multi-step-form .form-container form .step4-form {
-          height: 100%; }
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 12px; }
+          body .multi-step-form .form-container form .step4-form .control-panel {
+            background-color: #F8F9FF;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 25px; }
+            body .multi-step-form .form-container form .step4-form .control-panel .control-item {
+              display: flex;
+              justify-content: space-between; }
+              body .multi-step-form .form-container form .step4-form .control-panel .control-item .control-price {
+                color: #022959;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px; }
+              body .multi-step-form .form-container form .step4-form .control-panel .control-item .control-price-picked {
+                color: #022959;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 20px; }
+              body .multi-step-form .form-container form .step4-form .control-panel .control-item .control-item-name {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 7px; }
+                body .multi-step-form .form-container form .step4-form .control-panel .control-item .control-item-name h4 {
+                  color: #9699AA;
+                  font-weight: 400;
+                  line-height: 20px; }
+                body .multi-step-form .form-container form .step4-form .control-panel .control-item .control-item-name .change {
+                  color: #9699AA;
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 20px;
+                  text-decoration-line: underline;
+                  cursor: pointer; }
+                body .multi-step-form .form-container form .step4-form .control-panel .control-item .control-item-name .picked {
+                  color: #022959;
+                  font-size: 16px;
+                  font-weight: 500; }
+              body .multi-step-form .form-container form .step4-form .control-panel .control-item:first-child {
+                padding-bottom: 24px;
+                border-bottom: 1px solid rgba(150, 153, 170, 0.3); }
+          body .multi-step-form .form-container form .step4-form .total-amount {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; }
+            body .multi-step-form .form-container form .step4-form .total-amount .total {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 20px;
+              color: #9699AA; }
+            body .multi-step-form .form-container form .step4-form .total-amount .total-price {
+              color: #483EFF;
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 20px; }
         body .multi-step-form .form-container form .buttons {
           margin-top: auto; }

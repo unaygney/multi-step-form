@@ -3,7 +3,7 @@ import { Field } from "formik";
 import { StepInfo } from "../constants.js";
 function Step3({ billingTypes ,values }) {
 
-
+console.log(values)
   return (
     <div className="step3-form">
       <h2 className="form-title">Pick add-ons</h2>

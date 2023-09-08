@@ -7,7 +7,6 @@ import {StepInfo} from '../constants.js'
 
 function Step1({values}) {
 
-  console.log(values)
 
   return (
     <div className="step1-form">

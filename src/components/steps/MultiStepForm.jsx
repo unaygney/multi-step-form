@@ -27,12 +27,10 @@ function MultiStepForm() {
           // Step 2
           picked: "",
 
-          //step 3 
-          "service-0" : false,
-          "service-1" : false,
-          "service-2" : false
-    
-        
+          //step 3
+          "service-0": false,
+          "service-1": false,
+          "service-2": false,
         }}
         onSubmit={(values, actions) => {
           console.log("values", values);
@@ -50,23 +48,33 @@ function MultiStepForm() {
           return (
             <Form>
               {values.step === 1 && <Step1 values={values} />}
-              {values.step === 2 && <Step2 values={values} setBillingTypes={setBillingTypes} billingTypes={billingTypes} />}
-              {values.step === 3 && <Step3 values={values} billingTypes={billingTypes} />}
-              {values.step === 4 && <Step4 values={values} />}
+              {values.step === 2 && (
+                <Step2
+                  values={values}
+                  setBillingTypes={setBillingTypes}
+                  billingTypes={billingTypes}
+                />
+              )}
+              {values.step === 3 && (
+                <Step3 values={values} billingTypes={billingTypes} />
+              )}
+              {values.step === 4 && (
+                <Step4 values={values} billingTypes={billingTypes} />
+              )}
               {values.step === 5 && <Success values={values} />}
 
               <div className="buttons">
-                {values.step !== 1 && (
-                  <button
-                    className="btn"
-                    type="button"
-                    onClick={handleChangePrev}
-                  >
-                    Go Back
-                  </button>
-                )}
+                { values.step !== 1 && values.step !== values.lastStep && (
+                      <button
+                        className="btn"
+                        type="button"
+                        onClick={handleChangePrev}
+                      >
+                        Go Back
+                      </button>
+                    )}
 
-                {values.step < values.lastStep && (
+                {values.step < 4 && (
                   <button
                     className="btn active"
                     type="button"
@@ -76,8 +84,12 @@ function MultiStepForm() {
                   </button>
                 )}
 
-                {values.step === values.lastStep && (
-                  <button className="btn confirm" type="submit">
+                {values.step === values.lastStep - 1 && (
+                  <button
+                    className="btn confirm"
+                    onClick={handleChangeNext}
+                    type="submit"
+                  >
                     Confirm
                   </button>
                 )}

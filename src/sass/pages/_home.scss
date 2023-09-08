@@ -188,10 +188,14 @@ body {
 
         .step3-form {
           height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
           .checkbox-group {
             display: flex;
             flex-direction: column;
             gap: 16px;
+            margin-top: 28px;
 
             .checkbox-label {
               width: 100%;
@@ -203,46 +207,130 @@ body {
               gap: 24px;
               padding: 24px 12px;
 
-
               &.active {
                 border: 1px solid $color-purple;
                 background-color: $very-light-gray;
               }
 
-              .checkbox-text{
+              .checkbox-text {
                 display: flex;
                 flex-direction: column;
                 gap: 7px;
-                .checkbox-title{
+                .checkbox-title {
                   font-size: 16px;
                   font-weight: 500;
                   color: $color-denim;
                 }
-                .checkbox-info{
+                .checkbox-info {
                   font-size: 14px;
                   font-weight: 400;
                   line-height: 20px;
                   color: $color-gray;
                 }
-
-      
               }
 
-              .price{
+              .price {
                 margin-left: auto;
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 20px;
                 color: $color-purple;
-
               }
-
             }
           }
         }
 
         .step4-form {
           height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          .control-panel {
+            background-color: $very-light-gray;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 25px;
+
+         
+
+            .control-item {
+              display: flex;
+              justify-content: space-between;
+              
+              .control-price{
+                color: $color-denim;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+              }
+
+              .control-price-picked{
+                color: $color-denim;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 20px;
+              }
+              
+
+              .control-item-name {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 7px;
+
+                h4{
+                  color: $color-gray;
+                  font-weight: 400;
+                  line-height: 20px;
+
+                }
+
+                .change{
+                  color: $color-gray;
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 20px;
+                  text-decoration-line:underline ;
+                  cursor: pointer;
+                }
+
+                .picked{
+                  color: $color-denim;
+                  font-size: 16px;
+                  font-weight: 500;
+                }
+              }
+
+              &:first-child {
+                padding-bottom: 24px;
+                border-bottom: 1px solid rgba(150, 153, 170, .3);
+;
+              }
+            }
+          }
+
+          .total-amount{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .total{
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 20px;
+              color: $color-gray;
+            }
+
+            .total-price{
+              color: $color-purple;
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 20px;
+            }
+          }
         }
 
         .buttons {

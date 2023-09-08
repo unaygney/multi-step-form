@@ -52,13 +52,13 @@ export const Items = [
             "id": 1,
             "title": "Arcade",
             "price": "$9/mo",
-            "priceAmount": 15
+            "priceAmount": 9
           },
           {
             "id": 2,
             "title": "Advanced",
             "price": "$12/mo",
-            "priceAmount": 15
+            "priceAmount": 12
           },
           {
             "id": 3,
@@ -74,7 +74,7 @@ export const Items = [
             "title": "Arcade",
             "price": "$90/yr",
             "description": "2 months free",
-            "priceAmount": 120
+            "priceAmount": 90
           },
           {
             "id": 2,
@@ -90,7 +90,7 @@ export const Items = [
             "title": "Pro",
             "price": "$150/yr",
             "description": "2 months free",
-            "priceAmount": 120
+            "priceAmount": 150
           }
         ]
       },
