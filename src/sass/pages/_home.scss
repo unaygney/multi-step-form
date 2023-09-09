@@ -4,8 +4,6 @@ body {
   align-items: center;
   justify-content: center;
 
-
-
   .multi-step-form {
     background-color: $color-white;
     border-radius: 16px;
@@ -421,26 +419,25 @@ body {
           border-radius: 10px;
           height: 376px;
           width: 90%;
-          box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.10);
+          box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.1);
           padding: 0 30px;
 
-          .step2-form{
-            .radio-group{
+          .step2-form {
+            .radio-group {
               flex-direction: column;
               gap: 12px;
               margin-top: 0;
             }
           }
 
-          .step3-form{
-            .checkbox-group{
-
-              .checkbox-label{
+          .step3-form {
+            .checkbox-group {
+              .checkbox-label {
                 gap: 12px;
-padding: 12px;
-                .checkbox-text{
+                padding: 12px;
+                .checkbox-text {
                   gap: 0;
-                  .checkbox-title{
+                  .checkbox-title {
                     font-size: 14px;
                   }
                 }
@@ -448,27 +445,26 @@ padding: 12px;
             }
           }
 
-          .success-page{
+          .success-page {
             padding: 12px;
-            .success-title{
+            .success-title {
               font-size: 24px;
             }
-            .success-text{
+            .success-text {
               width: 34ch;
               font-size: 14px;
             }
           }
 
-
-          .buttons{
-            position:fixed;
+          .buttons {
+            position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
             background-color: $color-white;
-       .btn{
-margin: 16px;
-       }
+            .btn {
+              margin: 16px;
+            }
           }
         }
       }
