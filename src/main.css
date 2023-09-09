@@ -6,6 +6,10 @@
 * {
   box-sizing: border-box; }
 
+html, body {
+  width: 100%;
+  height: 100%; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -147,7 +151,6 @@ input:focus + .slider {
 
 body {
   background-color: #EFF5FF;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -158,53 +161,53 @@ body {
     padding: 16px;
     width: 940px;
     height: 600px; }
-    body .multi-step-form .side-bar {
-      width: 274px;
-      height: 568px;
-      border-radius: 10px;
-      background: url("./assets/bg-sidebar-desktop.svg") no-repeat center/cover;
-      display: flex;
-      flex-direction: column;
-      padding-top: 40px;
-      padding-left: 32px;
-      gap: 32px;
-      color: #FFF; }
-      body .multi-step-form .side-bar .item {
-        display: flex;
-        align-items: center;
-        gap: 16px; }
-        body .multi-step-form .side-bar .item .item-number {
-          border: 1px solid #FFF;
-          width: 33px;
-          height: 33px;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 9999px; }
-          body .multi-step-form .side-bar .item .item-number.active {
-            background-color: #BEE2FD;
-            color: #022959;
-            border: none; }
-        body .multi-step-form .side-bar .item .item-body {
-          display: flex;
-          flex-direction: column;
-          gap: 4px; }
-          body .multi-step-form .side-bar .item .item-body .subtitle {
-            font-size: 12px;
-            font-weight: 400;
-            line-height: normal;
-            font-style: normal;
-            color: #ABBCFF;
-            text-transform: uppercase; }
-          body .multi-step-form .side-bar .item .item-body .title {
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            letter-spacing: 1px;
-            text-transform: uppercase; }
     body .multi-step-form .form-container {
       display: flex; }
+      body .multi-step-form .form-container .side-bar {
+        width: 274px;
+        height: 568px;
+        border-radius: 10px;
+        background: url("./assets/bg-sidebar-desktop.svg") no-repeat center/cover;
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+        padding-left: 32px;
+        gap: 32px;
+        color: #FFF; }
+        body .multi-step-form .form-container .side-bar .item {
+          display: flex;
+          align-items: center;
+          gap: 16px; }
+          body .multi-step-form .form-container .side-bar .item .item-number {
+            border: 1px solid #FFF;
+            width: 33px;
+            height: 33px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px; }
+            body .multi-step-form .form-container .side-bar .item .item-number.active {
+              background-color: #BEE2FD;
+              color: #022959;
+              border: none; }
+          body .multi-step-form .form-container .side-bar .item .item-body {
+            display: flex;
+            flex-direction: column;
+            gap: 4px; }
+            body .multi-step-form .form-container .side-bar .item .item-body .subtitle {
+              font-size: 12px;
+              font-weight: 400;
+              line-height: normal;
+              font-style: normal;
+              color: #ABBCFF;
+              text-transform: uppercase; }
+            body .multi-step-form .form-container .side-bar .item .item-body .title {
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              letter-spacing: 1px;
+              text-transform: uppercase; }
       body .multi-step-form .form-container .buttons {
         display: flex; }
         body .multi-step-form .form-container .buttons .btn.active {
@@ -259,7 +262,10 @@ body {
               border-radius: 8px;
               display: flex;
               flex-direction: column;
-              padding: 16px; }
+              padding: 16px;
+              cursor: pointer; }
+              body .multi-step-form .form-container form .step2-form .radio-group label:hover {
+                border: 1px solid #483EFF; }
               body .multi-step-form .form-container form .step2-form .radio-group label .info {
                 margin-top: auto; }
                 body .multi-step-form .form-container form .step2-form .radio-group label .info .select-title {
@@ -309,7 +315,10 @@ body {
               display: flex;
               align-items: center;
               gap: 24px;
-              padding: 24px 12px; }
+              padding: 24px 12px;
+              cursor: pointer; }
+              body .multi-step-form .form-container form .step3-form .checkbox-group .checkbox-label:hover {
+                border: 1px solid #483EFF; }
               body .multi-step-form .form-container form .step3-form .checkbox-group .checkbox-label.active {
                 border: 1px solid #483EFF;
                 background-color: #F8F9FF; }
@@ -374,6 +383,8 @@ body {
                   line-height: 20px;
                   text-decoration-line: underline;
                   cursor: pointer; }
+                  body .multi-step-form .form-container form .step4-form .control-panel .control-item .control-item-name .change:hover {
+                    color: #483EFF; }
                 body .multi-step-form .form-container form .step4-form .control-panel .control-item .control-item-name .picked {
                   color: #022959;
                   font-size: 16px;
@@ -416,3 +427,62 @@ body {
             margin-top: 14px; }
         body .multi-step-form .form-container form .buttons {
           margin-top: auto; }
+
+@media (max-width: 478px) {
+  body {
+    align-items: flex-start; }
+    body .multi-step-form {
+      padding: 0;
+      width: 100%;
+      background-color: #EFF5FF;
+      box-shadow: none; }
+      body .multi-step-form .form-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw; }
+        body .multi-step-form .form-container .side-bar {
+          flex-direction: row;
+          justify-content: center;
+          width: 100%;
+          height: 172px;
+          background: url("./assets/bg-sidebar-mobile.svg") no-repeat center/cover;
+          padding: 0;
+          border-radius: 0; }
+          body .multi-step-form .form-container .side-bar .item {
+            justify-content: center; }
+            body .multi-step-form .form-container .side-bar .item .item-body {
+              display: none; }
+        body .multi-step-form .form-container form {
+          margin-top: -50px;
+          background-color: #FFF;
+          border-radius: 10px;
+          height: 376px;
+          width: 90%;
+          box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.1);
+          padding: 0 30px; }
+          body .multi-step-form .form-container form .step2-form .radio-group {
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 0; }
+          body .multi-step-form .form-container form .step3-form .checkbox-group .checkbox-label {
+            gap: 12px;
+            padding: 12px; }
+            body .multi-step-form .form-container form .step3-form .checkbox-group .checkbox-label .checkbox-text {
+              gap: 0; }
+              body .multi-step-form .form-container form .step3-form .checkbox-group .checkbox-label .checkbox-text .checkbox-title {
+                font-size: 14px; }
+          body .multi-step-form .form-container form .success-page {
+            padding: 12px; }
+            body .multi-step-form .form-container form .success-page .success-title {
+              font-size: 24px; }
+            body .multi-step-form .form-container form .success-page .success-text {
+              width: 34ch;
+              font-size: 14px; }
+          body .multi-step-form .form-container form .buttons {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #FFF; }
+            body .multi-step-form .form-container form .buttons .btn {
+              margin: 16px; } }

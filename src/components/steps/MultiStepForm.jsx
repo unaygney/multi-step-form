@@ -13,7 +13,7 @@ import Success from "./Success";
 function MultiStepForm() {
   const [billingTypes, setBillingTypes] = useState("monthly");
 const [step , setStep ] = useState(1)
-console.log(step)
+
   return (
     <>
       <div className="form-container">
